@@ -10,37 +10,6 @@ function zeroLeft(number) {
     return number >= 10 ? number : `0${number}`;
 }
 
-function getDayWeek(dayWeek) {
-    let dayWeekLiteral;
-
-    switch (dayWeek) {
-        case 0:
-            dayWeekLiteral = 'domingo';
-            return dayWeekLiteral;
-        case 1:
-            dayWeekLiteral = 'segunda-feira';
-            return dayWeekLiteral;
-        case 2:
-            dayWeekLiteral = 'terça-feira';
-            return dayWeekLiteral;
-        case 3:
-            dayWeekLiteral = 'quarta-feira';
-            return dayWeekLiteral;
-        case 4:
-            dayWeekLiteral = 'quinta-feira';
-            return dayWeekLiteral;
-        case 5:
-            dayWeekLiteral = 'sexta-feira';
-            return dayWeekLiteral;
-        case 6:
-            dayWeekLiteral = 'sábado';
-            return dayWeekLiteral;
-        default:
-            dayWeekLiteral = '';
-            return dayWeekLiteral;
-    }
-}
-
 function getMonth(month) {
     let monthLiteral;
 
@@ -84,6 +53,37 @@ function getMonth(month) {
         default:
             monthLiteral = '';
             return monthLiteral;
+    }
+}
+
+function getDayWeek(dayWeek) {
+    let dayWeekLiteral;
+
+    switch (dayWeek) {
+        case 0:
+            dayWeekLiteral = 'domingo';
+            return dayWeekLiteral;
+        case 1:
+            dayWeekLiteral = 'segunda-feira';
+            return dayWeekLiteral;
+        case 2:
+            dayWeekLiteral = 'terça-feira';
+            return dayWeekLiteral;
+        case 3:
+            dayWeekLiteral = 'quarta-feira';
+            return dayWeekLiteral;
+        case 4:
+            dayWeekLiteral = 'quinta-feira';
+            return dayWeekLiteral;
+        case 5:
+            dayWeekLiteral = 'sexta-feira';
+            return dayWeekLiteral;
+        case 6:
+            dayWeekLiteral = 'sábado';
+            return dayWeekLiteral;
+        default:
+            dayWeekLiteral = '';
+            return dayWeekLiteral;
     }
 }
 
