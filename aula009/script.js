@@ -3,75 +3,86 @@ const dayWeek = date.getDay();
 const day = date.getDate();
 const month = date.getMonth();
 const year = date.getFullYear();
-let dayWeekLiteral;
-let monthLiteral;
 
-switch (dayWeek) {
-    case 0:
-        dayWeekLiteral = 'Domingo';
-        break;
-    case 1:
-        dayWeekLiteral = 'Segunda-feira';
-        break;
-    case 2:
-        dayWeekLiteral = 'Terça-feira';
-        break;
-    case 3:
-        dayWeekLiteral = 'Quarta-feira';
-        break;
-    case 4:
-        dayWeekLiteral = 'Quinta-feira';
-        break;
-    case 5:
-        dayWeekLiteral = 'Sexta-feira';
-        break;
-    case 6:
-        dayWeekLiteral = 'Sábado';
-        break;
-    default:
-        dayWeekLiteral = '';
-        break;
+function getDayWeek(dayWeek) {
+    let dayWeekLiteral;
+
+    switch (dayWeek) {
+        case 0:
+            dayWeekLiteral = 'Domingo';
+            return dayWeekLiteral;
+        case 1:
+            dayWeekLiteral = 'Segunda-feira';
+            return dayWeekLiteral;
+        case 2:
+            dayWeekLiteral = 'Terça-feira';
+            return dayWeekLiteral;
+        case 3:
+            dayWeekLiteral = 'Quarta-feira';
+            return dayWeekLiteral;
+        case 4:
+            dayWeekLiteral = 'Quinta-feira';
+            return dayWeekLiteral;
+        case 5:
+            dayWeekLiteral = 'Sexta-feira';
+            return dayWeekLiteral;
+        case 6:
+            dayWeekLiteral = 'Sábado';
+            return dayWeekLiteral;
+        default:
+            dayWeekLiteral = '';
+            return dayWeekLiteral;
+    }
 }
 
-switch (month) {
-    case 0:
-        monthLiteral = 'Janeiro';
-        break;
-    case 1:
-        monthLiteral = 'Fevereiro';
-        break;
-    case 2:
-        monthLiteral = 'Março';
-        break;
-    case 3:
-        monthLiteral = 'Abril';
-        break;
-    case 4:
-        monthLiteral = 'Maio';
-        break;
-    case 5:
-        monthLiteral = 'Junho';
-        break;
-    case 6:
-        monthLiteral = 'Julho';
-        break;
-    case 7:
-        monthLiteral = 'Agosto';
-        break;
-    case 8:
-        monthLiteral = 'Setembro';
-        break;
-    case 9:
-        monthLiteral = 'Outubro';
-        break;
-    case 10:
-        monthLiteral = 'Novembro';
-        break;
-    case 11:
-        monthLiteral = 'Dezembro';
-        break;
-    default:
-        break;
+function getMonth(month) {
+    let monthLiteral;
+
+    switch (month) {
+        case 0:
+            monthLiteral = 'Janeiro';
+            return monthLiteral;
+        case 1:
+            monthLiteral = 'Fevereiro';
+            return monthLiteral;
+        case 2:
+            monthLiteral = 'Março';
+            return monthLiteral;
+        case 3:
+            monthLiteral = 'Abril';
+            return monthLiteral;
+        case 4:
+            monthLiteral = 'Maio';
+            return monthLiteral;
+        case 5:
+            monthLiteral = 'Junho';
+            return monthLiteral;
+        case 6:
+            monthLiteral = 'Julho';
+            return monthLiteral;
+        case 7:
+            monthLiteral = 'Agosto';
+            return monthLiteral;
+        case 8:
+            monthLiteral = 'Setembro';
+            return monthLiteral;
+        case 9:
+            monthLiteral = 'Outubro';
+            return monthLiteral;
+        case 10:
+            monthLiteral = 'Novembro';
+            return monthLiteral;
+        case 11:
+            monthLiteral = 'Dezembro';
+            return monthLiteral;
+        default:
+            return monthLiteral;
+    }
 }
 
-console.log(`${dayWeekLiteral}, ${day} de ${monthLiteral} de ${year}.`);
+function displayDate() {
+    return `${getDayWeek(dayWeek)}, ${day} de ${getMonth(month)} de ${year}.`;
+}
+
+const display = displayDate();
+console.log(display);
